@@ -12,18 +12,6 @@ FastClick.attach(document.body)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // global variables
 // Vue.prototype.$test = 'thi is the test text'
 // Vue.prototype.$changeTest = function(str) {
