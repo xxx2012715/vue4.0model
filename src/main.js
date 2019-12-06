@@ -23,6 +23,15 @@ FastClick.attach(document.body)
 
 
 
+
+// global variables
+// Vue.prototype.$test = 'thi is the test text'
+// Vue.prototype.$changeTest = function(str) {
+//   Vue.prototype.$test = str
+// }
+
+
+
 Vue.config.productionTip = false
 
 new Vue({

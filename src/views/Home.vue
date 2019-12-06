@@ -1,17 +1,22 @@
 <template>
-  <div class="home">
-    home
+  <div class="root">
+    root
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'home',
-  components: {
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+
   }
 }
 </script>
 
 <style scoped lang="stylus">
+
 </style>
