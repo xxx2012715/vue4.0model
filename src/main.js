@@ -6,8 +6,9 @@ import store from './store'
 import './assets/res/css/reset.css'
 import './assets/res/css/border.css'
 
-
-
+// fastclick
+import FastClick from 'fastclick'
+FastClick.attach(document.body)
 
 
 
