@@ -1,4 +1,7 @@
 
+const path = require('path')
+
+
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
     ? 'testDir/subTestDir'
@@ -6,7 +9,8 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   indexPath: 'test.html',
-  filenameHashing: false,
+  filenameHashing: false, // 文件名哈希
+  productionSourceMap: false, // 生产环境的source map文件
   // 代理
   // devServer: {
   //   open: true,
