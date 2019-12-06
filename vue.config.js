@@ -1,11 +1,4 @@
 
-
-const path = require('path')
-function resolve (dir) {
-  return path.join(__dirname, dir)
-}
-
-
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
     ? 'testDir/subTestDir'
@@ -14,6 +7,7 @@ module.exports = {
   assetsDir: 'static',
   indexPath: 'test.html',
   filenameHashing: false,
+  // 代理
   // devServer: {
   //   open: true,
   //   proxy: {
@@ -24,15 +18,24 @@ module.exports = {
   //     },
   //   }
   // },
+  configureWebpack: {
+    // 别名
+    resolve: {
+      alias: {
+        'imgs': 'src/assets/res/imgs',
+      }
+    }
+  },
   chainWebpack: config => {
-    // alias
-    config.resolve.alias
-      .set('@', resolve('src'))
-    // global stylus settings
+    // 全局 stylus 设置
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
     types.forEach(type => addStyleResource(config.module.rule('stylus').oneOf(type)))
   },
 }
+
+
+
+
 
 
 // 全局stylus配置引入
